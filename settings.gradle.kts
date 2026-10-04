@@ -1,6 +1,7 @@
 rootProject.name = "RandomQuotes"
 
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             mavenContent {

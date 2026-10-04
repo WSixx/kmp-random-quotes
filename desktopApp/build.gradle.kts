@@ -2,14 +2,18 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
+    id("randomquotes.compose.multiplatform")
     alias(libs.plugins.kotlinJvm)
-    alias(libs.plugins.composeMultiplatform)
-    alias(libs.plugins.composeCompiler)
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 kotlin {
     compilerOptions {
-        jvmTarget = JvmTarget.JVM_21
+        jvmTarget.set(JvmTarget.JVM_21)
     }
 }
 

@@ -1,9 +1,8 @@
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.composeMultiplatform)
-    alias(libs.plugins.composeCompiler)
+    id("randomquotes.kotlin.multiplatform")
+    id("randomquotes.compose.multiplatform")
 }
 
 kotlin {
